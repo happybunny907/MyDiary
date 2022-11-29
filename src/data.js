@@ -123,17 +123,18 @@ export const itemInformation = [
   
   export const filterGroupInformation = [
     {
-      title: 'Category',
+      title: 'Types',
       selections: ['Snacks', 'Desserts', 'Entrees', 'Packaged food']
     },
   
     {
-      title: 'Preference',
+      title: 'Dietary_Restrictions',
       selections: ["Dairy-free", "Nut-free"]
     },
   
     {
       title: 'Other',
-      selections: ['In my cart']
+      selections: ['Favorites']
     }
+
   ];
