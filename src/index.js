@@ -116,7 +116,7 @@ class App extends Component {
           />
         </div>
         <div className="Side-bar">
-          <SortGroup sortItems={this.sortItems} />
+          {/* <SortGroup sortItems={this.sortItems} /> */}
           <br />
           {filterGroups}
           <h1 style={{ "marginLeft": "4rem", "marginBottom": "1rem", "color": "grey", "fontSize": ".8rem" }}>Total Price: </h1>

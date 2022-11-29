@@ -5,7 +5,7 @@ import { withStyles } from "@material-ui/core/styles";
 
 import { Button, Card, CardContent, CardHeader, Typography } from '@material-ui/core';
 import { CardMedia } from '@mui/material';
-import { Favorite, FavoriteBorder } from '@material-ui/icons';
+
 
 
 const styles = {
