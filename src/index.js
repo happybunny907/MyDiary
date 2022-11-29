@@ -54,7 +54,7 @@ class App extends Component {
 
     items.forEach(item => {
       if (this.state.favorites[item.imageNum - 1]) {
-        item.Other = ['Favorites'];
+        item.Other = ['in my cart'];
       } else {
         item.Other = [];
       }
@@ -104,7 +104,7 @@ class App extends Component {
 
     const filterGroups = this.state.filterGroupInformation.map(this.generateFilterGroup);
     const listItems = this.state.itemInformation.map(this.generateItem);
-    const favoritesPrice = this.state.itemInformation.filter(item => item.Other.includes('Favorites')).reduce((acc, item) => acc + item.price, 0);
+    const favoritesPrice = this.state.itemInformation.filter(item => item.Other.includes('in my cart')).reduce((acc, item) => acc + item.price, 0);
 
     return (
       <div>
@@ -116,7 +116,7 @@ class App extends Component {
           />
         </div>
         <div className="Side-bar">
-          {/* <SortGroup sortItems={this.sortItems} /> */}
+          <SortGroup sortItems={this.sortItems} />
           <br />
           {filterGroups}
           <h1 style={{ "marginLeft": "4rem", "marginBottom": "1rem", "color": "grey", "fontSize": ".8rem" }}>Total Price: </h1>

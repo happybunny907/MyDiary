@@ -134,7 +134,7 @@ export const itemInformation = [
   
     {
       title: 'Other',
-      selections: ['Favorites']
+      selections: ['in my cart']
     }
 
   ];
