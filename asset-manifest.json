@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cs1300-development/static/css/main.8caf6ee1.css",
-    "main.js": "/cs1300-development/static/js/main.bc7cddcc.js",
+    "main.css": "/cs1300-development/static/css/main.d9bfb6f7.css",
+    "main.js": "/cs1300-development/static/js/main.dc8e793f.js",
     "static/media/10.png": "/cs1300-development/static/media/10.6d6f3c4912fe1ace3be1.png",
     "static/media/1.png": "/cs1300-development/static/media/1.06908b2c86494ab2ee3d.png",
     "static/media/6.png": "/cs1300-development/static/media/6.175bf15f298ffdca568b.png",
@@ -16,11 +16,11 @@
     "static/media/11.png": "/cs1300-development/static/media/11.bf7357e14a6563e4c36c.png",
     "static/media/title-logo.png": "/cs1300-development/static/media/title-logo.efb2f99df1add1b92fbc.png",
     "index.html": "/cs1300-development/index.html",
-    "main.8caf6ee1.css.map": "/cs1300-development/static/css/main.8caf6ee1.css.map",
-    "main.bc7cddcc.js.map": "/cs1300-development/static/js/main.bc7cddcc.js.map"
+    "main.d9bfb6f7.css.map": "/cs1300-development/static/css/main.d9bfb6f7.css.map",
+    "main.dc8e793f.js.map": "/cs1300-development/static/js/main.dc8e793f.js.map"
   },
   "entrypoints": [
-    "static/css/main.8caf6ee1.css",
-    "static/js/main.bc7cddcc.js"
+    "static/css/main.d9bfb6f7.css",
+    "static/js/main.dc8e793f.js"
   ]
 }
