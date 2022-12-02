@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect} from 'react';
 import './reset.css';
 
 import {FormControl, FormLabel, RadioGroup, FormControlLabel, Radio} from '@material-ui/core';
@@ -14,12 +14,11 @@ class SortGroup extends Component {
   handleChange = event => {
     this.setState({value: event.target.value});
     this.props.sortItems(event.target.value);
+    this.props.refreshSortVal(event.target.value);
   }
-
   render() {
-    if (this.props.resetSort) {
-        this.state.value="imageNum";
-    }
+
+
     return (
       <FormControl component="fieldset">
         <FormLabel component="legend">Sort By</FormLabel>

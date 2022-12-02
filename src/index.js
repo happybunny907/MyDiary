@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './reset.css';
 import './index.css';
@@ -17,6 +17,7 @@ class App extends Component {
       addCartitemInformation,
       filters: [],
       favorites: [],
+      sortVal: ""
     }
   }
 
@@ -27,6 +28,7 @@ class App extends Component {
     this.setState({ favorites, itemInformation: this.keepFavorites(this.state.itemInformation), addCartitemInformation:itemInformation});
     this.setState({ itemInformation: this.getFilteredItems(this.state.filters)});
   }
+
   // (name, type) can be ('Snacks','Dietary_Restrictions')
   filterItems = (name, type) => {
 
@@ -36,10 +38,11 @@ class App extends Component {
     } else {
       totalFilters = [...this.state.filters, { name, type }];
     }
+    
     this.setState({
       filters: totalFilters,
       itemInformation: this.getFilteredItems(totalFilters)
-    });
+    }, ()=> {this.sortItems(this.state.sortVal)});
   }
 
   // data.js -> all items (?)
@@ -63,7 +66,11 @@ class App extends Component {
   // loops thru all items, if it is filtered, put it in filteredItems
   getFilteredItems = filters => {
 
-    if (filters.length == 0) { return itemInformation }
+    // this.setState({filterGroupInformation: filterGroupInformation})
+    if (filters.length == 0) {
+      // this.setState({itemInformation: itemInformation});
+      // this.sortItems(this.state.sortVal);
+      return itemInformation; }
 
 
     let filteredItems = [];
@@ -89,10 +96,15 @@ class App extends Component {
     return (<div><FilterGroup {...info} filters={this.state.filters} filterItems={this.filterItems} key={info.title} /> <br /> </div>);
   }
 
+  refreshSortVal = (s) => {
+    this.setState({sortVal:s});
+  }
 
   render() {
     return (
+    
       <div>
+        
         <div className="Image-title">
           <img
             src={require('./assets/title-logo.png')}
@@ -104,9 +116,9 @@ class App extends Component {
               itemInformation: ogItemInformation, filterGroupInformation: ogFilterGroupInformation, filters: [],
               favorites: [], addCartitemInformation: ogItemInformation
             });
-          }}>Reset filters <br />(note: it is not required to work on aggregator, <br /> and aggregator can't function after reset) </button>
+          }}>Reset filters <br />(note: it is not required to work on aggregator, <br /> and aggregator stops working after reset) </button>
         <div className="Side-bar">
-          <SortGroup sortItems={this.sortItems}/>
+          <SortGroup sortItems={this.sortItems} refreshSortVal={this.refreshSortVal}/>
           <br />
           {this.state.filterGroupInformation.map((info) => (<div><FilterGroup {...info} filters={this.state.filters} filterItems={this.filterItems} key={info.title} /> <br /> </div>))}
           <h1 style={{ "marginLeft": "4rem", "marginBottom": "1rem", "color": "grey", "fontSize": ".8rem" }}>Total Price: </h1>

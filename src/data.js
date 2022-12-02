@@ -130,7 +130,7 @@ export const itemInformation = [
     {
       title: 'Dietary_Restrictions',
       selections: ["Dairy-free", "Nut-free"]
-    },
+    }
 
 
   ];
@@ -266,7 +266,8 @@ export const itemInformation = [
       {
         title: 'Dietary_Restrictions',
         selections: ["Dairy-free", "Nut-free"]
-      },
+      }
+  
   
     ];
     export const addCartitemInformation = [
