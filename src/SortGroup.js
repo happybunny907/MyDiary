@@ -9,17 +9,8 @@ class SortGroup extends Component {
 
   constructor() {
     super()
-
-    this.state = {value: 'imageNum'}
-      
-      // value: this.props.reset
-      // value: 'rating'
-    
+    this.state = {value: 'imageNum'}    
   }
-
-  // sortItems = (sortType) => {
-  //   this.setState({ itemInformation: this.state.itemInformation.sort((item1, item2) => { return item1[sortType] - item2[sortType] }) });
-  // }
   handleChange = event => {
     this.setState({value: event.target.value});
     this.props.sortItems(event.target.value);

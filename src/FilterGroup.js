@@ -9,7 +9,6 @@ class FilterGroup extends Component {
 
   // for example, selection can be 'Snacks'
   generateFormControlLabel = (selection) => {
-    // const isChecked = this.props.activeFilters.includes(selection)
     var isChecked = false;
     // filters can be {'Snacks','Dietary_Restrictions'}
     if (this.props.filters.some((f) => f.name == selection)) {

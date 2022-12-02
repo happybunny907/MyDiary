@@ -131,11 +131,7 @@ export const itemInformation = [
       title: 'Dietary_Restrictions',
       selections: ["Dairy-free", "Nut-free"]
     },
-  
-    {
-      title: 'Other',
-      selections: ['in my cart']
-    }
+
 
   ];
   export const ogItemInformation = [
@@ -154,7 +150,7 @@ export const itemInformation = [
       price: 3.99,
       rating: 4,
       Types: ["Snacks"],
-      Dietary_Restrictions: ["Dairy-free"],
+      Dietary_Restrictions: ["Nut-free"],
       description: "Trader Joe’s Mini Gingerbread People are decked out for the holidays, dapperly dressed in bowties and buttons, ready for any seasonal soirée.",
       imageNum: 2,
       Other: []
@@ -174,7 +170,7 @@ export const itemInformation = [
       price: 6.99,
       rating: 7,
       Types: ["Desserts"],
-      Dietary_Restrictions: ["Dairy-free"],
+      Dietary_Restrictions: ["Nut-free"],
       description: "The forerunner of what is known as “traditional pumpkin pie,” was a hollowed-out pumpkin filled with milk, honey, and spices—sometimes even apples.",
       imageNum: 4,
       Other: []
@@ -194,7 +190,7 @@ export const itemInformation = [
         price: 4.49,
         rating: 1,
         Types: ["Desserts"],
-        Dietary_Restrictions: ["Dairy-free"],
+        Dietary_Restrictions: ["Nut-free"],
         description: "Each one is made with a mix of pumpkin purée, freshly peeled Northern Spy apples, rich cream, and zesty pumpkin pie spice, all encased in a hand-folded, flaky, oh-so-buttery crust, and baked to a glorious, golden brown.",
         imageNum: 6,
         Other: []
@@ -214,7 +210,7 @@ export const itemInformation = [
       price: 5.99,
       rating: 1,
       Types: ["Entrees"],
-      Dietary_Restrictions: ["Dairy-free"],
+      Dietary_Restrictions: ["Nut-free"],
       description: "The holidays are the perfect time for side dishes to take the spotlight, and there’s one dish in particular that always makes the most of its moment.",
       imageNum: 8,
       Other: []
@@ -234,7 +230,7 @@ export const itemInformation = [
       price: 7.99,
       rating: 1,
       Types: ["Entrees"],
-      Dietary_Restrictions: ["Dairy-free"],
+      Dietary_Restrictions: ["Nut-free"],
       description: "What you need is Trader Joe's Fully Cooked Brined Bone-In Half Turkey Breast to eliminate the excess, while still supplying several juicy, flavorful portions of meat for the interested parties at the party.",
       imageNum: 10,
       Other: []
@@ -271,11 +267,6 @@ export const itemInformation = [
         title: 'Dietary_Restrictions',
         selections: ["Dairy-free", "Nut-free"]
       },
-    
-      {
-        title: 'Other',
-        selections: ['in my cart']
-      }
   
     ];
   

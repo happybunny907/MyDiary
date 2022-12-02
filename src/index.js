@@ -83,7 +83,12 @@ class App extends Component {
   sortItems = (sortType) => {
     this.setState({ itemInformation: this.state.itemInformation.sort((item1, item2) => { return item1[sortType] - item2[sortType] }) });
   }
-  
+
+  generateFilterGroup = (info) => {
+    return (<div><FilterGroup {...info} filters={this.state.filters} filterItems={this.filterItems} key={info.title} /> <br /> </div>);
+  }
+
+
   render() {
     return (
       <div>
@@ -106,13 +111,17 @@ class App extends Component {
           <h1 style={{ "marginLeft": "4rem", "marginBottom": "1rem", "color": "grey", "fontSize": ".8rem" }}>Total Price: </h1>
           <br />
           <br />
-          <header style={{ "marginLeft": "-4rem","marginTop": "3rem", "fontSize": "3rem"}}> ${this.state.itemInformation.filter(item => item.Other.includes('in my cart')).reduce((acc, item) => acc + item.price, 0)} </header>
+          <header style={{ "marginLeft": "-4rem","marginTop": "3rem", "fontSize": "3rem"}}> 
+          ${this.state.itemInformation.filter(item => item.Other.includes('in my cart')).reduce((acc, item) => acc + item.price, 0)} </header>
         </div>
         <div className="Main-grid">
+
           <div className="Item-grid">
             {this.state.itemInformation.map((item) => <Item {...item} favoriteItem={this.favoriteItem} key={item.imageNum} />)}
+
           </div>
         </div>
+
       </div>
     );
   }
