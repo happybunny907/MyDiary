@@ -37,17 +37,18 @@ class Item extends Component {
     super()
   }
 
-  toggleFavorite = () => {
+  toggleAdd = () => {
     this.props.favoriteItem(this.props.imageNum);
   }
 
-  generateDietaryRestrictions = (restriction) => {
+  generateAll = (restriction) => {
     return <span>{restriction} </span>
   }
 
   render() {
 
-    const restrictionList = this.props.Dietary_Restrictions.map(this.generateDietaryRestrictions);
+    const restrictionList = this.props.Dietary_Restrictions.map(this.generateAll);
+    const typeList = this.props.Types.map(this.generateAll);
     const NameTypography = withStyles({
       root: {
         color: "#C8261C"
@@ -82,7 +83,7 @@ class Item extends Component {
             </Typography>
           </div>
           <Typography color="textSecondary" >
-            <i>Category: </i>{this.props.Types[0]}
+            <i>Category: </i>{typeList}
           </Typography>
           <Typography color="textSecondary" >
             <i>Dietary Restrictions: </i>{restrictionList}
@@ -100,7 +101,7 @@ class Item extends Component {
               }}
               variant="contained"
               color="secondary"
-              onClick={() => this.toggleFavorite()}>
+              onClick={() => this.toggleAdd()}>
               Remove from cart
             </Button>
           ) : (
@@ -110,7 +111,7 @@ class Item extends Component {
               }}
               variant="contained"
               color="primary"
-              onClick={() => this.toggleFavorite()}
+              onClick={() => this.toggleAdd()}
             >
               Add to cart
             </Button>

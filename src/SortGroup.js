@@ -24,7 +24,7 @@ class SortGroup extends Component {
       <FormControl component="fieldset">
         <FormLabel component="legend">Sort By</FormLabel>
         <RadioGroup value={this.state.value} onChange={this.handleChange}>
-          <FormControlLabel value="rating" control={<Radio /> } onChange={this.handleChange}label="Customer review (low to high)" />
+          {/* <FormControlLabel value="rating" control={<Radio /> } onChange={this.handleChange}label="Customer review (low to high)" /> */}
           <FormControlLabel value="price" control={<Radio />} label="Price (low to high)" />
           <FormControlLabel value="imageNum" control={<Radio />} label="default" />
         </RadioGroup>

@@ -13,5 +13,7 @@ The website is organized with clear hierarchy under which there is a title for t
 The website is composed of a header, a side-bar with filters and sorts, a reset button, and a main grid which presents 12 items. Each item has 
 information including name, price, customer reviews, type labels, dietary-restriction labels, and a short desription. The website is rendered in index.js as a parent which passes props to SortGroup.js and FilterGroup.js, and Item.js. 
 
-In index.js, it passes a sortItem function into SortGroup as a prop, and it has a state, "value", that keep tracks of which sort label and its corresponding radio button are active. It also passes item information, filters, and filterItem into FilterGroup.js as props to keep track of which filters are active. In addition, the reset button requires a isCheck boolean to help uncheck filter once the user presses reset. 
+index.js has five state variables that is used to keep track of items, filters, filtereditems, favorites, and items that are added to the cart. In index.js, it passes a sortItem function into SortGroup as a prop, and it has a state, "value", that keep tracks of which sort label and its corresponding radio button are active. It also passes item information, filters, and filterItem into FilterGroup.js as props to keep track of which filters are active. In addition, the reset button requires a isCheck boolean to help uncheck filter once the user presses reset. 
 
+### Future Potential Improvements
+Currently, "reset filters" button will break the code if there are already items added to the cart. After discussing with the TAs, since this reset on aggregator functionality is not required for this assignment, it has not bee fixed.

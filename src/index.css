@@ -50,6 +50,7 @@ body {
 Button{
   display: flex;
   flex-direction: row;
+  margin-top: 25px;
   margin-left: 15px;
   color: #a51d1d;
   background-color: #e1abab;

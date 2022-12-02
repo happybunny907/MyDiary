@@ -7,13 +7,14 @@ import Item from './Item';
 import FilterGroup from './FilterGroup';
 import SortGroup from './SortGroup';
 
-import { itemInformation, filterGroupInformation, ogItemInformation, ogFilterGroupInformation } from './data';
+import { itemInformation, filterGroupInformation, ogItemInformation, ogFilterGroupInformation,addCartitemInformation } from './data';
 class App extends Component {
   constructor() {
     super()
     this.state = {
       itemInformation,
       filterGroupInformation,
+      addCartitemInformation,
       filters: [],
       favorites: [],
     }
@@ -23,8 +24,8 @@ class App extends Component {
   favoriteItem = (imgNum) => {
     let favorites = this.state.favorites;
     favorites[imgNum - 1] = !favorites[imgNum - 1];
-    this.setState({ favorites, itemInformation: this.keepFavorites(this.state.itemInformation) });
-    this.setState({ itemInformation: this.getFilteredItems(this.state.filters) });
+    this.setState({ favorites, itemInformation: this.keepFavorites(this.state.itemInformation), addCartitemInformation:itemInformation});
+    this.setState({ itemInformation: this.getFilteredItems(this.state.filters)});
   }
   // (name, type) can be ('Snacks','Dietary_Restrictions')
   filterItems = (name, type) => {
@@ -101,9 +102,9 @@ class App extends Component {
         <button onClick={() => {
             this.setState({
               itemInformation: ogItemInformation, filterGroupInformation: ogFilterGroupInformation, filters: [],
-              favorites: []
+              favorites: [], addCartitemInformation: ogItemInformation
             });
-          }}>Reset filters</button>
+          }}>Reset filters <br />(note: it is not required to work on aggregator, <br /> and aggregator can't function after reset) </button>
         <div className="Side-bar">
           <SortGroup sortItems={this.sortItems}/>
           <br />
@@ -112,7 +113,7 @@ class App extends Component {
           <br />
           <br />
           <header style={{ "marginLeft": "-4rem","marginTop": "3rem", "fontSize": "3rem"}}> 
-          ${this.state.itemInformation.filter(item => item.Other.includes('in my cart')).reduce((acc, item) => acc + item.price, 0)} </header>
+          ${(this.state.addCartitemInformation.filter(item => item.Other.includes('in my cart')).reduce((acc, item) => (acc + item.price), 0)).toFixed(2)} </header>
         </div>
         <div className="Main-grid">
 
