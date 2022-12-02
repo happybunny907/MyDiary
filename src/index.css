@@ -47,6 +47,14 @@ body {
   grid-template-rows: 1fr 1fr;
 }
 
+Button{
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+  color: #a51d1d;
+  background-color: #e1abab;
+  box-shadow: 0 1px 1px #e1abab;
+}
 @media screen and (max-width: 768px) {
   .Item-grid {
     grid-template-columns: 1fr;

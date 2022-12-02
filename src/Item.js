@@ -77,6 +77,9 @@ class Item extends Component {
             <Typography color="textSecondary" style={{ marginRight: 10 }}>
               ${this.props.price}
             </Typography>
+            <Typography color="textSecondary" style={{ marginRight: 10 }}>
+            Customer review:   {this.props.rating}/10
+            </Typography>
           </div>
           <Typography color="textSecondary" >
             <i>Category: </i>{this.props.Types[0]}
@@ -84,7 +87,6 @@ class Item extends Component {
           <Typography color="textSecondary" >
             <i>Dietary Restrictions: </i>{restrictionList}
           </Typography>
-
           <Typography variant="paragraph" component="p" >
             {this.props.description}
           </Typography>
